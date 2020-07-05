@@ -11,7 +11,7 @@ const MouseTracker: React.FC = () => {
         return () => {
             document.removeEventListener('click', updateMouse)
         }
-    }, [])
+    })
     return (
         <p>X: {positions.x}, Y: {positions.y}</p>
     )
