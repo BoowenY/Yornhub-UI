@@ -1,27 +1,21 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Hello from './components/Hello'
-import MouseTracker from './components/MouseTracker'
+import React from 'react';
+import Button, {ButtonType, ButtonSize} from './components/Button/button'
 const App: React.FC = () => {
-  const [show, setShow] = useState(true)
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <button onClick={()=>{setShow(!show)}}>Toggle Tracker</button>
-        </p>
-        <Hello message="Hello World"/>
-        {show && <MouseTracker/>}
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Button>Default Button</Button>
+        <Button btnType={ButtonType.Secondary}>Secondary Button</Button>
+        <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>Primary Large Button</Button>
+        <Button btnType={ButtonType.Danger} size={ButtonSize.Large}>Danger Large Button</Button>
+        <Button btnType={ButtonType.Primary} size={ButtonSize.Small}>Primary Small Button</Button>
+        <Button btnType={ButtonType.Danger} size={ButtonSize.Small}>Danger Small Button</Button>
+        <Button disabled btnType={ButtonType.Link} href="http://www.baidu.com">Link Button Disabled</Button>
+        <Button btnType={ButtonType.Link} href="http://www.baidu.com">Link Button</Button>
+        <Button btnType={ButtonType.Secondary}>Porn</Button>
+        <Button btnType={ButtonType.Primary}>Hub</Button>
+        <Button btnType={ButtonType.Secondary}>上传</Button>
+        <Button btnType={ButtonType.Primary}>★升级</Button>
       </header>
     </div>
   );
