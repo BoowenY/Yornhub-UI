@@ -23,6 +23,37 @@
         }
     }
 }
+
+$colors: (
+  fill: #a972cb,
+  pulse: #ef6eae, 
+  close: #ff7f82, 
+  raise: #ffa260, 
+  up: #e4cb58, 
+  slide: #8fc866, 
+  offset: #19bc8b
+);
+.btn:hover,
+.btn:focus {
+  box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+.btn{  
+    color: var(--color);
+    transition: 0.25s;
+    
+    &:hover,
+    &:focus { 
+      border-color: var(--hover);
+      color: $orange;
+    }
+  }
+.btn{
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+  }
+
 .btn-lg{
     @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $border-radius-lg);
 }

@@ -13,6 +13,14 @@ const App: React.FC = () => {
         <MenuItem  disabled>
         cool link2
         </MenuItem>
+        <SubMenu title="fuck">
+          <MenuItem>
+          fuck 1
+          </MenuItem>
+          <MenuItem>
+          fuck 2
+          </MenuItem>
+        </SubMenu>
         <MenuItem >
         cool link3
         </MenuItem>
